@@ -30,7 +30,7 @@ body {
 
 /* --- HERO SECTION --- */
 .hero-section {
-    background-image: url('img/fondo.jpg'); /* Cambia por tu imagen real */
+    background-image: url('img/fondo.jpg');
     background-size: cover;
     background-position: center center;
     color: #fff;
@@ -95,10 +95,11 @@ body {
     border: 2px solid #000;
 }
 
+
 /* --- SECCIÓN INFO (Sobre Nosotros + Contacto) --- */
 .info-section {
     position: relative;
-    background-image: url('img/restauntante\ 2.jpg'); /* Imagen de fondo */
+    background-image: url('img/restauntante 2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -133,25 +134,137 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-/* --- SECCIÓN DE RESERVA --- */
-.reservation-section {
-    background-color: #000;
+/* --- SECCIÓN DE SALONES --- */
+.salones-section {
+    background-image: url('img/eventos.jpg'); /* Ruta de la imagen de fondo para los salones */
+    background-size: cover;
+    background-position: center center;
     color: white;
     padding: 80px 0;
     text-align: center;
+    position: relative;
 }
 
+.salones-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.salones-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.salones-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.salones-card {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+    z-index: 1;
+}
+
+.salones-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.salones-card p {
+    font-size: 1rem;
+}
+
+.salones-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro para mejor visibilidad */
+    z-index: 0;
+}
+
+/* --- BOTÓN FLOTAANTE DE WHATSAPP --- */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+.whatsapp-btn img {
+    width: 35px;
+    height: auto;
+}
+
+/* Estilo para el contenedor de "Reservar tu mesa" con fondo negro y pequeño */
+.reservacion-container {
+    background-color: #000; /* Fondo negro */
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 400px; /* Hace que la sección sea más pequeña */
+    margin: 0 auto; /* Centra el contenedor */
+    margin-top: 30px;
+}
+
+/* Estilo para el botón "Reservar tu mesa" */
+.btn-reservar-ya {
+    background-color: #FF5733; /* Naranja brillante */
+    color: white;
+    border-radius: 6px;
+    padding: 12px 40px;
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-reservar-ya:hover {
+    background-color: #e04d27;
+    color: white;
+}
+
+/* Estilo para el fondo negro de la sección */
+.reservation-section {
+    background-color: #000; /* Fondo negro para toda la sección */
+    color: white;
+    padding: 40px 0; /* Reducir el espaciado vertical */
+    text-align: center;
+}
+
+/* Reducir el tamaño de los elementos de la sección */
 .reservation-section h2,
 .reservation-section p {
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 1.2rem; /* Reducir tamaño de fuente */
 }
 
 .reservation-section .btn-outline-light {
     border: 2px solid white;
     color: white;
-    font-size: 1.1rem;
-    padding: 10px 30px;
+    font-size: 1rem; /* Reducir tamaño de fuente */
+    padding: 8px 25px;
     transition: all 0.3s ease;
     border-radius: 6px;
 }
@@ -161,11 +274,10 @@ body {
     color: black;
 }
 
-/* --- SECCIÓN DE MENÚ --- */
 .menu-section {
-    background-image: url('img/restaurante\ 3.jpg'); /* Cambia por tu imagen */
+    background-image: url('img/restauntante\ 2.jpg'); 
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     position: relative;
     padding: 80px 0;
     color: white;
@@ -177,7 +289,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5); 
     z-index: 0;
 }
 
@@ -192,38 +304,74 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
-/* Tarjetas del menú */
-.menu-card {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+.menu-section p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-.menu-card:hover {
-    transform: translateY(-5px);
-}
 
-.menu-card .card-body {
-    color: #000;
-}
-
-/* --- FOOTER --- */
-footer {
-    background-color: #111;
+.menu-section .btn-outline-light {
+    border: 2px solid #fff;
     color: white;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 0.9rem;
-}
-/* Ocultar contenido al inicio */
-body.fade-out {
-    opacity: 0;
-    transition: opacity 0.8s ease-in;
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+    border-radius: 6px;
 }
 
-/* Mostrar cuando esté listo */
-body.fade-in {
-    opacity: 1;
-    transition: opacity 0.8s ease-out;
+.menu-section .btn-outline-light:hover {
+    background-color: white;
+    color: black;
 }
+
+/* Alineación de los botones (descargar y reservar) */
+.d-flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+}
+/* --- SECCIÓN DE UBICACIÓN --- */
+.ubicacion-section {
+    background-image: url('img/777.jpg'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+.ubicacion-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.ubicacion-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 800px; /* Limita el tamaño máximo del mapa */
+    height: 450px;
+    border: none;
+    z-index: 1;
+    position: relative;
+}
+
+/* Agregar un overlay para que el texto sea más legible */
+.ubicacion-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay oscuro */
+    z-index: 0;
+}
+
